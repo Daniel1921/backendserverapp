@@ -1,0 +1,20 @@
+{
+    "name": "backend-server",
+    "version": "1.0.0",
+    "description": "API REST con JWT mongoDB ",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server/app",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Petrosky TEAM",
+    "license": "MIT",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.18.2",
+        "colors": "^1.2.4",
+        "express": "^4.16.3",
+        "mongoose": "^5.0.17",
+        "mongoose-unique-validator": "^2.0.1"
+    }
+}
