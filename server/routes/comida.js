@@ -13,6 +13,7 @@ app.post('/comida', (req, res) => {
 
         hora: body.hora,
         comida: body.comida,
+
         img: body.img
 
     });

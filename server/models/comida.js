@@ -5,7 +5,9 @@ var Schema = mongoose.Schema;
 var comidaSchema = new Schema({
 
     hora: { type: String, required: [true, 'la hora es necesaria'] },
-    comida: { type: String, required: [true, 'los alimentos son necesarios'] },
+    comida: [
+        { type: [String], required: [true, 'los alimentos son necesarios'] }
+    ],
     img: { type: String }
 
 });
