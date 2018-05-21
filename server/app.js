@@ -12,9 +12,9 @@ app.use(bodyParser.json());
 
 
 app.use(require('./routes/paciente'));
+console.log(process.env.URLDB);
 
-
-mongoose.connection.openUri('mongodb://localhost:27017/appmedicadb', (err, res) => {
+mongoose.connection.openUri(process.env.URLDB, (err, res) => {
     console.log(`Inicio de base de datos`.yellow);
     if (err) throw err;
     console.log(`iniciado la base de datos exitosamente`.green)
