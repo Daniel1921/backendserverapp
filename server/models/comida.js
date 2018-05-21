@@ -8,7 +8,8 @@ var comidaSchema = new Schema({
     comida: [
         { type: [String], required: [true, 'los alimentos son necesarios'] }
     ],
-    img: { type: String }
+    img: { type: String },
+    jornada: { type: String, required: [true, 'la jornada es necesaria'] }
 
 });
 

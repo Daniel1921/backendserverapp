@@ -13,7 +13,7 @@ app.post('/comida', (req, res) => {
 
         hora: body.hora,
         comida: body.comida,
-
+        jornada: body.jornada,
         img: body.img
 
     });
@@ -43,7 +43,7 @@ app.post('/comida', (req, res) => {
 app.get('/comida', (req, res, next) => {
 
     Comida.find({},
-            'hora comida img')
+            'hora jornada comida img ')
         .exec(
             (err, comida) => {
                 if (err) {
