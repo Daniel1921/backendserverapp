@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 
 app.use(require('./routes/paciente'));
+app.use(require('./routes/comida'));
 console.log(process.env.URLDB);
 
 mongoose.connection.openUri(process.env.URLDB, (err, res) => {
@@ -22,13 +23,7 @@ mongoose.connection.openUri(process.env.URLDB, (err, res) => {
 })
 
 
-//importar rutas 
-//var appRoutes = require('./routes/app');
-//var pacienteRoutes = require('./routes/paciente');
 
-// rutas
-/* app.use('/paciente', pacienteRoutes);
-app.use('/', appRoutes); */
 
 app.listen(process.env.PORT, () => {
     console.log(`expres server puerto 3000 http://localhost:${process.env.PORT} online`.blue)
