@@ -2,12 +2,13 @@ var express = require('express');
 var app = express();
 var Alimento = require('../models/alimento');
 var bcrypt = require('bcryptjs');
+const { verificaToken, verificarAdmin_Role, verificarPaciente, verificarMedicoPaciente } = require('../middlewares/autenticacion');
 
 // =========================================
 // crear una nueva comida
 // =========================================
 
-app.post('/alimento', (req, res) => {
+app.post('/alimento', [verificaToken], (req, res) => {
     var body = req.body;
     var alimento = new Alimento({
 
@@ -37,7 +38,7 @@ app.post('/alimento', (req, res) => {
 // =========================================
 
 
-app.get('/alimento', (req, res, next) => {
+app.get('/alimento', [verificaToken], (req, res, next) => {
 
     Alimento.find({},
             'nombre')

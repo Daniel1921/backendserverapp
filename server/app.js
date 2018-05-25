@@ -11,9 +11,10 @@ app.use(bodyParser.json());
 
 
 
-app.use(require('./routes/paciente'));
-app.use(require('./routes/comida'));
-app.use(require('./routes/alimento'));
+app.use(require('./routes/index.js'));
+
+
+
 console.log(process.env.URLDB);
 
 mongoose.connection.openUri(process.env.URLDB, (err, res) => {
