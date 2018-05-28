@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var Comida = require('../models/comida');
-var bcrypt = require('bcryptjs');
+// var bcrypt = require('bcryptjs');
 const { verificaToken, verificarAdmin_Role, verificarPaciente, verificarMedicoPaciente } = require('../middlewares/autenticacion');
 
 // =========================================

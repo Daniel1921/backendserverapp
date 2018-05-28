@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var Medico = require('../models/medico');
-var bcrypt = require('bcryptjs');
+// var bcrypt = require('bcryptjs');
 var _ = require('underscore');
 const { verificaToken, verificarAdmin_Role, verificarMedico } = require('../middlewares/autenticacion');
 
@@ -79,7 +79,7 @@ app.put('/medico/:cedula', [verificaToken, verificarAdmin_Role], function(req, r
     let body = _.pick(req.body, ['clinica',
         'nombres',
         'apellidos',
-        'email'       
+        'email'
     ]);
 
 
