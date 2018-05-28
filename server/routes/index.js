@@ -6,7 +6,7 @@ app.use(require('./medico'));
 app.use(require('./comida'));
 app.use(require('./alimento'));
 app.use(require('./usuario'));
-// app.use(require('./login'));
+app.use(require('./login'));
 
 
 module.exports = app;
