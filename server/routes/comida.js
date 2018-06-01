@@ -44,7 +44,7 @@ app.post('/comida', [verificaToken, verificarPaciente], (req, res) => {
 app.get('/comida', [verificaToken, verificarMedicoPaciente], (req, res, next) => {
 
     Comida.find({},
-            'hora jornada comida img ')
+            'id hora jornada comida img ')
         .exec(
             (err, comida) => {
                 if (err) {
