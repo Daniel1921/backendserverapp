@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 const Usuario = require('../models/usuario');
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 var _ = require('underscore');
 
 // los middlewares se ponen como segundo de argumento de una función express.
